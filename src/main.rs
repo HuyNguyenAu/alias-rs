@@ -1,16 +1,20 @@
 use serde_json::Value;
 use std::collections::HashMap;
-use std::env::args;
+use std::env::{args, current_exe};
 use std::fs::read_to_string;
 use std::io::Result;
 use std::process::exit;
 use std::process::Command;
+use std::path::Path;
 
 fn main() -> Result<()> {
     let args: Vec<String> = args().collect();
 
     // Load aliases.
-    let data: String = read_to_string("aliases.json").expect("Failed to read aliases.json.");
+    let working_exe_path = &current_exe()?;
+    let working_path = Path::new(working_exe_path).parent().unwrap_or(Path::new("")).to_str().unwrap_or("");
+    
+    let data: String = read_to_string(format!("{}/aliases.json", working_path)).expect("Failed to read aliases.json.");
     let aliases: HashMap<String, Value> = serde_json::from_str(&data)?;
 
     /* Make sure there is only one argument.
