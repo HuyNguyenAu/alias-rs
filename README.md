@@ -17,15 +17,16 @@ Create `aliases.json`:
 ```
 
 The program `alias.exe` must be in the same directory as `aliases.json`:
-| Mode | LastWriteTime | Length | Name |
-| ---- | ------------- | ------ | ---- |
-| -a---- | 5/06/2021 4:22 PM | 300032 | alias.exe |
-| -a---- | 5/06/2021 4:07 PM | 264 | aliases.json |
+```
+example_directory\
+    alias.exe
+    aliases.json
+```
 
 The program takes only a single argument as the alias:
 ```
-.\alias.exe wsl
-dev@DESKTOP-7LLUJG2:~$
+$ .\alias.exe wsl
+ev@DESKTOP-7LLUJG2:~$
 ```
 
 ## Why?
