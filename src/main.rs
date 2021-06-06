@@ -21,8 +21,7 @@ fn main() -> Result<()> {
     The program only accepts the following form:
     alias.exe [alias] */
     if args.len() != 2 {
-        println!("alias.exe [alias]");
-        println!("Available aliases:");
+        println!("alias.exe [alias]\nAvailable aliases:");
 
         // Print all aliases for the user to see.
         for (alias, _) in aliases {
