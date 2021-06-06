@@ -22,9 +22,9 @@ fn main() -> Result<()> {
     alias.exe [alias] */
     if args.len() != 2 {
         println!("alias.exe [alias]");
-        println!("Avaliable aliases:");
+        println!("Available aliases:");
 
-        // Print all aliases to user to see.
+        // Print all aliases for the user to see.
         for (alias, _) in aliases {
             println!("{}", alias);
         }
@@ -32,13 +32,13 @@ fn main() -> Result<()> {
         exit(0);
     }
 
-    /* If we don't find the alias or command, then just
+    /* If we don't find the alias or command, asd then just
     return a string. We will handle this later. */
     let alias: &str = &args[1];
     let command = aliases[alias].as_str().unwrap_or("");
 
     /* If the command is empty, exit and tell user we couldn't
-    find the alis.*/
+    find the alias.*/
     if command.is_empty() {
         println!("Unexpected alias '{}'.", &alias);
         exit(0);
