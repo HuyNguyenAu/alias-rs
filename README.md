@@ -30,4 +30,4 @@ ev@DESKTOP-7LLUJG2:~$
 ```
 
 ## Why?
-I didn't want to mess around with Windows registry keys and batch files. I want a single json file that contained my required aliases in a structured and readable format (very simple to a `~/.bashrc` file).
+I didn't want to mess around with Windows registry keys and batch files. I want a single json file that contained my required aliases in a structured and readable format (very similar to a `~/.bashrc` file).
